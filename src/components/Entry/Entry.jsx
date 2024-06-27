@@ -62,7 +62,7 @@ const Entry = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/employees');
+        const response = await fetch('https://main-server-2kc5.onrender.com/api/employees');
         const data = await response.json();
         setEmployees(data);
         console.log(data);
@@ -140,7 +140,7 @@ const Entry = () => {
     console.log('Data submitted:', dataToSubmit);
   
     try {
-      const response = await fetch('http://localhost:3000/api/balance', {
+      const response = await fetch('https://main-server-2kc5.onrender.com/api/balance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

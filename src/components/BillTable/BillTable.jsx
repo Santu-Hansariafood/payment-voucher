@@ -15,7 +15,7 @@ const BillTable = () => {
   useEffect(() => {
     const fetchBills = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/balance');
+        const response = await axios.get('https://main-server-2kc5.onrender.com/api/balance');
         setBills(response.data);
       } catch (error) {
         console.error("Error fetching bills:", error);
@@ -144,7 +144,7 @@ const BillTable = () => {
           productFormData: updatedProductFormData,
         };
 
-        axios.put(`http://localhost:3000/api/balance/${bill._id}`, updatedBill)
+        axios.put(`https://main-server-2kc5.onrender.com/api/balance/${bill._id}`, updatedBill)
           .then(() => {
             setBills(prevBills =>
               prevBills.map(b => (b._id === bill._id ? updatedBill : b))
@@ -165,7 +165,7 @@ const BillTable = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3000/api/balance/${billId}`)
+        axios.delete(`https://main-server-2kc5.onrender.com/api/balance/${billId}`)
           .then(() => {
             setBills(prevBills => prevBills.filter(b => b._id !== billId));
           })
