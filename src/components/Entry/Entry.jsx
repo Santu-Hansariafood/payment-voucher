@@ -49,7 +49,7 @@ const Entry = () => {
     receivableAmount: '',
     balanceAmount: ''
   });
-  const [employees, setEmployees] = useState([]); // State to store employees
+  const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
     const total = rows.reduce((sum, row) => sum + (parseFloat(row.amount) || 0), 0);

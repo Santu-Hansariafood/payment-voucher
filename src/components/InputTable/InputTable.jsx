@@ -1,5 +1,5 @@
-import React from 'react';
-import { IoIosAddCircleOutline } from 'react-icons/io';
+import React from "react";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 const InputTable = ({ rows, handleInputChange, handleAddRow }) => {
   return (
@@ -24,7 +24,9 @@ const InputTable = ({ rows, handleInputChange, handleAddRow }) => {
                   type="text"
                   className="w-full px-2 py-1 border rounded"
                   value={row.particular}
-                  onChange={(e) => handleInputChange(index, 'particular', e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange(index, "particular", e.target.value)
+                  }
                 />
               </td>
               <td className="px-4 py-2">
@@ -32,7 +34,9 @@ const InputTable = ({ rows, handleInputChange, handleAddRow }) => {
                   type="number"
                   className="w-full px-2 py-1 border rounded"
                   value={row.bags}
-                  onChange={(e) => handleInputChange(index, 'bags', e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange(index, "bags", e.target.value)
+                  }
                 />
               </td>
               <td className="px-4 py-2">
@@ -40,7 +44,9 @@ const InputTable = ({ rows, handleInputChange, handleAddRow }) => {
                   type="number"
                   className="w-full px-2 py-1 border rounded"
                   value={row.rate}
-                  onChange={(e) => handleInputChange(index, 'rate', e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange(index, "rate", e.target.value)
+                  }
                 />
               </td>
               <td className="px-4 py-2">{row.amount}</td>

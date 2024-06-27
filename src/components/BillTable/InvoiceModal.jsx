@@ -161,15 +161,17 @@ const InvoiceModal = ({ bill }) => {
           </tr>
         </thead>
         <tbody>
-          ${rows.map(
-            (row) => `
+          ${rows
+            .map(
+              (row) => `
               <tr>
                 <td>${row.particular || ""}</td>
                 <td>${row.bags || ""}</td>
                 <td>${row.rate || ""}</td>
                 <td>${row.amount || ""}</td>
               </tr>`
-          ).join("")}
+            )
+            .join("")}
         </tbody>
       </table>
       <h2 class="section-title">Summary</h2>
@@ -204,8 +206,8 @@ const InvoiceModal = ({ bill }) => {
     cancelButtonText: "Close",
     width: "80%",
     customClass: {
-      popup: 'invoice-modal'
-    }
+      popup: "invoice-modal",
+    },
   }).then((result) => {
     if (result.isConfirmed) {
       printInvoice();
