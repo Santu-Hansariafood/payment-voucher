@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import ProductForm from '../ProductForm/ProductForm';
 import InputForm from '../InputForm/InputForm';
 import InputTable from '../InputTable/InputTable';
@@ -213,6 +214,9 @@ const Entry = () => {
         >
           Cancel
         </button>
+        <Link to="/bills" className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">
+          Go to Bill List
+        </Link>
       </div>
     </div>
   );
